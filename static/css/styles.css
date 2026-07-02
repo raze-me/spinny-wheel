@@ -18,6 +18,29 @@
     --border: #ece8ff;
     --border-light: #f5f2ff;
 
+    --radius-sm: 10px;
+    --radius: 18px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    --shadow-sm: 0 2px 8px rgba(124, 92, 252, 0.08);
+    --shadow: 0 4px 24px rgba(124, 92, 252, 0.12);
+    --shadow-lg: 0 8px 48px rgba(124, 92, 252, 0.22);
+    --shadow-hover: 0 12px 40px rgba(124, 92, 252, 0.22);
+
+    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --font: "Poppins", "Plus Jakarta Sans", sans-serif;
+    --nav-heigth: 72px;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -79,4 +102,67 @@ body.page-exit {
     pointer-events: none;
 }
 
+.blob-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #c4b5fd 0%, #a78bfa 50%, transparent 80%);
+    top: -150px;
+    left: -120px;
+    opacity: 0.35;
+}
 
+.blob-2 {
+    width: 450px;
+    height: 600px;
+    background: radial-gradient(circle, #ff8fab 0%, #fda4c0 60%, transparent 80%);
+    top: 50px;
+    right: -80px;
+    opacity: 0.3;
+}
+
+.blob-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #93c5fd 0%, #60a5fa 60%, transparent 80%);
+    top: 100px;
+    left: 30%;
+    opacity: 0.25;
+}
+
+.blob-4 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #4ade80 0%, #34d399 60%, transparent 80%);
+    top: -80px;
+    right: 10%;
+    opacity: 0.2;
+}
+
+.bg-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: var(--radius);
+}
