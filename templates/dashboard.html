@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Spinny</title>
+</head>
+<body class="dashboard=body">
+
+    <div class="bg-wrapper" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo" aria-label="Spinny Home">
+                <div class="logo-icon" aria-hidden="true"><span class="material-icons round">donut_large</span></div>
+                <span class="logo-text">Spinny</span>
+            </a>
+
+            <div class="search-bar" role="search">
+                <span class="material-icons-round search-icon" style="font-size:18px;" aria-hidden="true">search</span>
+                <input type="search" class="search-input" id="main-search" placeholder="Search Wheels..." aria-label="Search your wheels"/>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+                    <span class="material-icons-round theme-icon" aria-hidden="true">dark_mode</span>
+                </button>
+                <div class="nav-avatar" role="img" aria-label="User profile" title="Your profile">SR</div>
+                
+                <button class="hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span><span><span></span></span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="nav-links" id="nav-menu" role="list" style="z-index: 999; position:fixed; width:100%;">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/create" class="nav-link">Create Wheel</a></li>
+        <li><a href="/dashboard" class="nav-link active">Dashboard</a></li>
+    </ul>
+
+    <main class="dashboard-main" id="main-content">
+        <header class="dashboard-header fade-in">
+            <h1 class="welcome-title">Welcome Back <span class="material-icons-round" style="font-size:1em; vertical-align: middle;" aria-hidden="true">waving_hand</span></h1>
+            <p class="welcome-subtitle">Here's what's happening with your wheels today.</p>
+            <p class="dashboard-date" id="dashboard-date" aria-live="polite"></p>
+        </header>
+
+        <section class="stats-strip" aria-label="Usage statistics">
+            <div class="stat-card fade-in" id="stat-total-wheels">
+                <div class="stat-card-icon purple" aria-hidden="true"><span class="material-icons-round" style="font-size:22px; color: #7C5CFC">track_changes</span></div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">12</div>
+                    <div class="stat-card-label">Total Spins</div>
+                </div>
+            </div>
+
+            <div class="stat-card fade-in" id="stat-shared" style="transition-delay:0.16s">
+                <div class="stat-card-icon green" aria-label="true"><span class="material-icons-round" style="font-size:22px;color: #4ADE80">link</span></div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">7</div>
+                    <div class="stat-card-label">Shared Wheels</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

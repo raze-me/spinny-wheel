@@ -165,4 +165,40 @@ body.page-exit {
     gap: 8px;
     padding: 13px 28px;
     border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: var(--transition);
+    overflow: hidden;
+    user-select: none;
+    white-space: nowrap;
 }
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(124, 92, 252, 0.35);
+}
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(124, 92, 252, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-secondary {
+    background: var(--card);
+    color: var(--primary);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
