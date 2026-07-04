@@ -66,7 +66,91 @@
                     <div class="stat-card-label">Shared Wheels</div>
                 </div>
             </div>
+
+            <div class="stat-card fade-in" id="stat-streak" style="transition-delay:0.24s">
+                <div class="stat-card-icon yellow" aria-hidden="true"><span class="material-icons-round" style="font-size:22px; color:#FBBF24">local_fire_department</span></div>
+                <div class="stat-card-content">
+                    <div class="stat-card-value">5d</div>
+                    <div class="stat-card-label">Spin Streak</div>
+                </div>
+            </div>
         </section>
+
+        <section class="quick-actions" aria-labelledby="quick-heading">
+            <h2 class="section-heading" id="quick-heading">Quick Actions</h2>
+            <div class="quick-grid">
+                
+                <a href="/create" class="quick-card purple-card tilt-card" id="quick-create" aria-label="Create a new wheel">
+                    <div class="quick-icon" aria-hidden="true"><span class="material-icons-round" style="font-size:28px;">add_circle_outline</span></div>
+                    <div>
+                        <div class="quick-label">Create Wheel</div>
+                        <div class="quick-sublabel">Build something new</div>
+                    </div>
+                    <div class="quick-arrow" aria-hidden="true"><span class="material-icons-round" style="font-size: 28px;">arrow_forward</span></div>
+                </a>
+
+                <a href="#my-wheels" class="quick-card pink-card tilt-card" id="quick-my-wheels" aria-label="View my wheels">
+                    <div class="quick-icon" aria-hidden="true"><span class="material-icons round" style="font-size: 28px;">library_books</span></div>
+                    <div>
+                        <div class="quick-label">My Wheels</div>
+                        <div class="quick-value">12 Wheels saved</div>
+                    </div>
+                    <div class="quick-arrow" aria-hidden="true"><span class="material-icons-round" style="font-size: 16px;">arrow_forward</span></div>
+                </a>
+
+                <a href="#recent-wheels" class="quick-card blue-card tilt-card" id="quick-recent" aria-label="View recent spins">
+                    <div class="quick-icon" aria-hidden="true"><span class="material-icons-round" style="font-size: 28px;">history</span></div>
+                    <div>
+                        <div class="quick-label">Recent Spins</div>
+                        <div class="quick-value">248 total Spins</div>
+                    </div>
+                    <div class="quick-arrow" aria-hidden="true"><span class="material-icons-round" style="font-size: 16px;">arrow_forward</span></div>
+                </a>
+
+                <a href="#shared" class="quick-card green-card tilt-card" id="quick-shared" aria-label="View shared wheels">
+                    <div class="quick-icon" aria-hidden="true"><span class="material-icons-round" style="font-size:28px;">link</span></div>
+                    <div>
+                        <div class="quick-label">Shared Wheels</div>
+                        <div class="quick-sublabel">7 Links active</div>
+                    </div>
+                    <div class="quick-arrow" aria-hidden="true"><span class="material-icons-round" style="font-size: 16px;">arrow_forward</span></div>
+                </a>
+            </div>
+        </section>
+        
+        <section class="recent-wheels" id="recent-wheels" aria-labelledby="recent-heading">
+            <div class="section-header">
+                <h2 class="section-heading" id="recent-heading" style="margin-bottom: 0; flex:1;">Recent Wheels</h2>
+                <a href="#my-wheels" class="see-all-link" id="see-all-wheels">
+                    See all
+                    <span class="material-icons-round" style="font-size:16px;" aria-hidden="true">arrow_forward</span>
+                </a>
+            </div>
+
+            <div class="wheels-grid" id="recent-wheels-grid">
+                <article class="wheel-card tilt-card" id="wheel-friday-dinner" tabindex="0" aria-label="Friday Dinner wheel, 8 options">
+                    <div class="wheel-card-header">
+                        <div class="whole-emoji-bg" style="background:linear-gradient(135deg, #fff0f4, #ffd6e7);" aria-hidden="true"><span class="material-icons-round" style="font-size:18px;">local_pizza</span></div>
+                        <button class="wheel-menu-btn" aria-label="Options for Friday Dinner wheel" aria-haspopup="true"><span class="material-icons-round" style="font-size: 18px;">more-horiz</span></button>
+                    </div>
+
+                    <h3 class="wheel-card-name">Friday Dinner</h3>
+                    <div class="wheel-card-meta">
+                        <span class="meta-tag">
+                            <span class="material-icon-round" style="font-size: 10px;" aria-hidden="true">circle</span>
+                            8 Options
+                        </span>
+                        <span class="meta-time">Edited Yesterday</span>
+                    </div>
+                    <div class="wheel-mini-preview" aria-hidden="true">
+                        <div class="wheel-mini-bar" style="width:75%;"></div>
+                    </div>
+                    
+                </article>
+            </div>
+
+        </section>
+
     </main>
     
 </body>
